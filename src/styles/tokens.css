@@ -1,0 +1,25 @@
+:root {
+  --color-bg: #020617;
+  --color-surface: #111827;
+  --color-surface-alt: #191d28;
+  --color-accent: #4f6bed;
+  --color-accent-soft: rgba(79, 107, 237, 0.16);
+  --color-text: #f3f4f6;
+  --color-text-muted: #6b7280;
+  --color-text-subtle: #9ca3af;
+  --color-on-accent: #000000;
+  --color-line: rgba(148, 163, 184, 0.12);
+
+  --font-body: "Lexend Deca", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-logo: "Arvo", Georgia, "Times New Roman", serif;
+
+  --container: 1110px;
+  --gutter: 24px;
+  --section-y: 96px;
+
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+
+  --shadow-card: 0 24px 60px -32px rgba(2, 6, 23, 0.9);
+}
