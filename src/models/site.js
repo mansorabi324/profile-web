@@ -1,5 +1,4 @@
-import portrait from "../assets/images/hero-portrait.jpg";
-import aboutPhoto from "../assets/images/hero-portrait.jpg";
+import profilePhoto from "../assets/images/about-photo.jpg";
 
 export const profile = {
   brand: { first: "About", second: "Me." },
@@ -12,8 +11,8 @@ export const profile = {
   email: "hello@andersoncoper.dev",
   phone: "+62 812 3456 7890",
   location: "Malang, Indonesia",
-  photo: portrait,
-  aboutPhoto,
+  photo: profilePhoto,
+  aboutPhoto: profilePhoto,
   about: [
     "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.",
     "Passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.",
