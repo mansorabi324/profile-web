@@ -13,7 +13,7 @@
 
 .brand {
   font-family: var(--font-logo);
-  font-size: 24px;
+  font-size: var(--text-logo);
   font-weight: 700;
 }
 
@@ -30,9 +30,9 @@
 
 .socialLink {
   color: var(--color-text-subtle);
-  font-size: 16px;
+  font-size: var(--text-sm);
   text-transform: uppercase;
-  letter-spacing: 0.02em;
+  letter-spacing: var(--tracking-caps);
   transition: color 0.18s ease;
 }
 
@@ -42,5 +42,5 @@
 
 .copy {
   color: var(--color-text-muted);
-  font-size: 14px;
+  font-size: var(--text-xs);
 }

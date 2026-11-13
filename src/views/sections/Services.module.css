@@ -34,8 +34,8 @@
 
 .title {
   max-width: 286px;
-  font-size: 26px;
-  line-height: 1.6;
+  font-size: var(--text-card-title);
+  line-height: var(--leading-relaxed);
   font-weight: 700;
 }
 

@@ -22,8 +22,8 @@
 }
 
 .title {
-  font-size: clamp(30px, 4vw, 42px);
-  line-height: 1.4;
+  font-size: var(--text-hero);
+  line-height: var(--leading-snug);
   font-weight: 700;
 }
 

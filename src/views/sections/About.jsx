@@ -29,7 +29,7 @@ export default function About() {
             ))}
           </div>
 
-          <Button href="#contact">Contact us</Button>
+          <Button href="#contact">Contact me</Button>
         </div>
       </Container>
     </section>

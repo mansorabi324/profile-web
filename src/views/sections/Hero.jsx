@@ -11,7 +11,7 @@ export default function Hero() {
           <p className={styles.greeting}>{profile.greeting}</p>
           <h1 className={styles.title}>{profile.headline}</h1>
           <p className={styles.summary}>{profile.summary}</p>
-          <Button href="#contact">Contact us</Button>
+          <Button href="#contact">Contact me</Button>
         </div>
 
         <div className={styles.media} data-reveal>

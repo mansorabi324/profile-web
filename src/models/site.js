@@ -1,18 +1,19 @@
-import profilePhoto from "../assets/images/about-photo.jpg";
+import profilePhoto from "../assets/images/profile-photo.jpg";
+import aboutPhoto from "../assets/images/about-photo.jpg";
 
 export const profile = {
   brand: { first: "About", second: "Me." },
-  name: "Anderson Coper",
+  name: "Naufal Abiyyu",
   role: "Web Developer & Designer",
   greeting: "Hello, Welcome",
-  headline: "I'm Anderson Coper",
+  headline: "I'm Naufal Abiyyu",
   summary:
-    "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.",
-  email: "hello@andersoncoper.dev",
-  phone: "+62 812 3456 7890",
+    "Informatics student at Brawijaya University focused on Machine Learning, Deep Learning, and Data Science. I enjoy turning data into models that solve real-world problems.",
+  email: "naufalabiyyuarhab@gmail.com",
+  phone: "+62 857 6951 9721",
   location: "Malang, Indonesia",
   photo: profilePhoto,
-  aboutPhoto: profilePhoto,
+  aboutPhoto: aboutPhoto,
   about: [
     "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.",
     "Passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.",
