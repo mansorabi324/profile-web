@@ -4,7 +4,7 @@ import project3 from "../assets/images/project-3.jpg";
 import project4 from "../assets/images/project-4.jpg";
 import project5 from "../assets/images/project-5.jpg";
 
-export const projects = [
+export const highlights = [
   {
     id: "project-1",
     title: "Brand Website",

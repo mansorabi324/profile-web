@@ -43,14 +43,10 @@
   line-height: var(--leading-body);
   font-weight: 400;
   cursor: pointer;
-  transition: transform 0.18s ease, filter 0.18s ease;
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
 }
 
 .button:hover {
   filter: brightness(1.08);
-  transform: translateY(-1px);
-}
-
-.button:active {
-  transform: translateY(0);
+  box-shadow: 0 10px 24px rgba(79, 107, 237, 0.35);
 }

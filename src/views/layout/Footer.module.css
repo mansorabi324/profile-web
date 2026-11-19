@@ -1,6 +1,46 @@
 .footer {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   padding-block: 56px;
-  border-top: 1px solid var(--color-line);
+  background-color: var(--glass-bg);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--glass-shadow);
+}
+
+.footer::before,
+.footer::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(120px);
+  opacity: 0.3;
+}
+
+.footer::before {
+  width: 320px;
+  height: 320px;
+  left: -140px;
+  top: -160px;
+  background-color: var(--color-accent);
+}
+
+.footer::after {
+  width: 280px;
+  height: 280px;
+  right: -120px;
+  bottom: -150px;
+  background-color: #7c5cf0;
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .footer {
+    background-color: rgba(10, 14, 30, 0.9);
+  }
 }
 
 .inner {

@@ -2,9 +2,25 @@ import Container from "../ui/Container";
 import Button from "../ui/Button";
 import SectionHeading from "../ui/SectionHeading";
 import { contactChannels } from "../../models/contact";
+import { profile } from "../../models/site";
 import styles from "./Contact.module.css";
 
 export default function Contact() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const data = new FormData(event.currentTarget);
+    const name = data.get("name");
+    const email = data.get("email");
+    const subject = data.get("subject") || `Portfolio message from ${name}`;
+    const message = data.get("message");
+
+    const encodedSubject = encodeURIComponent(subject);
+    const body = encodeURIComponent(`${message}\n\nFrom: ${name} (${email})`);
+
+    window.location.href = `mailto:${profile.email}?subject=${encodedSubject}&body=${body}`;
+  };
+
   return (
     <section id="contact" className={styles.contact}>
       <Container className={styles.inner}>
@@ -21,7 +37,13 @@ export default function Contact() {
               <li key={channel.id} className={styles.channel}>
                 <span className={styles.label}>{channel.label}</span>
                 {channel.href ? (
-                  <a className={styles.value} href={channel.href}>
+                  <a
+                    className={styles.value}
+                    href={channel.href}
+                    {...(channel.external
+                      ? { target: "_blank", rel: "noreferrer noopener" }
+                      : {})}
+                  >
                     {channel.value}
                   </a>
                 ) : (
@@ -31,11 +53,7 @@ export default function Contact() {
             ))}
           </ul>
 
-          <form
-            className={styles.form}
-            onSubmit={(event) => event.preventDefault()}
-            action="#"
-          >
+          <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.field}>
               <label className={styles.label} htmlFor="contact-name">
                 Name
@@ -65,6 +83,18 @@ export default function Contact() {
             </div>
 
             <div className={styles.field}>
+              <label className={styles.label} htmlFor="contact-subject">
+                Subject
+              </label>
+              <input
+                className={styles.input}
+                id="contact-subject"
+                name="subject"
+                type="text"
+              />
+            </div>
+
+            <div className={styles.field}>
               <label className={styles.label} htmlFor="contact-message">
                 Message
               </label>
@@ -78,6 +108,9 @@ export default function Contact() {
             </div>
 
             <Button type="submit">Send message</Button>
+            <p className={styles.hint}>
+              Opens your email app with the message ready to send.
+            </p>
           </form>
         </div>
       </Container>

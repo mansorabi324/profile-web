@@ -1,0 +1,120 @@
+.resume {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: 85px;
+}
+
+.resume::before,
+.resume::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  opacity: 0.3;
+  filter: blur(110px);
+  pointer-events: none;
+}
+
+.resume::before {
+  width: 460px;
+  height: 460px;
+  top: -160px;
+  right: -180px;
+}
+
+.resume::after {
+  width: 380px;
+  height: 380px;
+  left: -160px;
+  bottom: -180px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 80px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 32px;
+  background-color: var(--glass-bg);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--glass-shadow);
+  transition: border-color 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  background-color: var(--glass-bg-hover);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.period {
+  color: var(--color-text-subtle);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: var(--text-resume-title);
+  line-height: var(--leading-body);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.organization {
+  font-size: var(--text-sm);
+  line-height: var(--leading-body);
+  font-weight: 400;
+  color: var(--color-accent);
+}
+
+.description {
+  margin-top: 8px;
+  color: var(--color-text-subtle);
+}
+
+.link {
+  margin-top: auto;
+  padding-top: 16px;
+  color: var(--color-accent);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: var(--color-text);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .card {
+    background-color: rgba(10, 14, 30, 0.9);
+  }
+}

@@ -9,13 +9,16 @@ export default function About() {
     <section id="about" className={styles.about}>
       <Container className={styles.inner}>
         <div className={styles.media} data-reveal>
-          <img
-            src={profile.aboutPhoto}
-            alt={`${profile.name} at work`}
-            width="475"
-            height="475"
-            loading="lazy"
-          />
+          <picture>
+            <source media="(max-width: 768px)" srcSet={profile.photo} />
+            <img
+              src={profile.aboutPhoto}
+              alt={profile.name}
+              width="475"
+              height="475"
+              loading="lazy"
+            />
+          </picture>
         </div>
 
         <div className={styles.copy} data-reveal>

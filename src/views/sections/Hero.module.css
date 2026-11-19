@@ -1,6 +1,36 @@
 .hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   padding-block: var(--section-y);
   background-color: var(--color-surface);
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(120px);
+  opacity: 0.3;
+}
+
+.hero::before {
+  width: 420px;
+  height: 420px;
+  top: -170px;
+  left: -180px;
+  background-color: var(--color-accent);
+}
+
+.hero::after {
+  width: 360px;
+  height: 360px;
+  right: -170px;
+  bottom: -190px;
+  background-color: #7c5cf0;
 }
 
 .inner {
@@ -38,6 +68,7 @@
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: var(--radius-lg);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 24px 60px rgba(2, 6, 23, 0.45);
 }
 
 @media (max-width: 900px) {

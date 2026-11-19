@@ -15,25 +15,27 @@ export const profile = {
   photo: profilePhoto,
   aboutPhoto: aboutPhoto,
   about: [
-    "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.",
-    "Passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.",
+    "I’ve built classification models using Python, PyTorch, and Scikit-learn, including a waste classifier and a chronic kidney disease predictor.",
+    "Beyond coding, I’m actively involved in campus organizations and have received national-level funding for student programs.",
   ],
 };
 
 export const navigation = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
-  { id: "service", label: "Service" },
-  { id: "portfolio", label: "Portfolio" },
-  { id: "experience", label: "Resume" },
+  { id: "expertise", label: "Expertise" },
+  { id: "highlights", label: "Highlights" },
+  { id: "resume", label: "Resume" },
   { id: "contact", label: "Contact" },
 ];
 
 export const sectionIds = navigation.map((item) => item.id);
 
 export const socials = [
-  { label: "GitHub", href: "https://github.com" },
-  { label: "LinkedIn", href: "https://linkedin.com" },
-  { label: "Dribbble", href: "https://dribbble.com" },
-  { label: "Instagram", href: "https://instagram.com" },
+  { label: "GitHub", href: "https://github.com/mansorabi324" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/naufal-abiyyu-arhab-4893ab322/",
+  },
+  { label: "Instagram", href: "https://www.instagram.com/abiyyu.arhab.1/" },
 ];

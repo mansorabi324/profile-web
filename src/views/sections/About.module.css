@@ -1,5 +1,35 @@
 .about {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   padding-block: var(--section-y);
+}
+
+.about::before,
+.about::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(120px);
+  opacity: 0.3;
+}
+
+.about::before {
+  width: 380px;
+  height: 380px;
+  top: -150px;
+  right: -160px;
+  background-color: #7c5cf0;
+}
+
+.about::after {
+  width: 340px;
+  height: 340px;
+  left: -150px;
+  bottom: -170px;
+  background-color: var(--color-accent);
 }
 
 .inner {
@@ -27,6 +57,10 @@
   pointer-events: none;
 }
 
+.media picture {
+  display: block;
+}
+
 .media img {
   position: relative;
   z-index: 1;
@@ -35,6 +69,7 @@
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: var(--radius-lg);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 24px 60px rgba(2, 6, 23, 0.45);
 }
 
 .copy {
@@ -61,8 +96,8 @@
   }
 
   .media {
-    --frame-offset: 20px;
-    --frame-drop: 24px;
+    --frame-offset: 35px;
+    --frame-drop: 37px;
     margin-inline: auto;
   }
 }
