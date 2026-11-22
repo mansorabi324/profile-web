@@ -1,5 +1,3 @@
-const drive =
-  "https://drive.google.com/drive/folders/1H-oMM6aJ3pr0lQHGLq1iUfFnDr8Iwog7?usp=sharing";
 const transcript =
   "https://drive.google.com/file/d/1EOxy26dnXm1QK5IypYV-bPRF_-_c0gTO/view?usp=sharing";
 const speakerCertificate =
